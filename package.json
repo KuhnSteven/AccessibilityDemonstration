@@ -1,0 +1,28 @@
+{
+  "name": "accessibilitydemonstration",
+  "version": "1.0.0",
+  "description": "DWS2 Week 3- learning accessibility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KuhnSteven/AccessibilityDemonstration.git"
+  },
+  "keywords": [
+    "Accessibility",
+    "DWS2"
+  ],
+  "author": "Steven Kuhn",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KuhnSteven/AccessibilityDemonstration/issues"
+  },
+  "homepage": "https://github.com/KuhnSteven/AccessibilityDemonstration#readme",
+  "devDependencies": {
+    "browser-sync": "^2.24.4",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1"
+  }
+}
