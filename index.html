@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
+    <div id="formOutput"></div>
     <form id="checkoutForm" onsubmit="return formBuild()">
         <section>
             <h1>Product- Tiger & Palms Leather Jacket</h1>
@@ -24,7 +25,7 @@
                 <input type="radio" name="size" id="extraLarge" value="X-LRG">
 
             <p>Choose A Color:</p>
-                <label for="black"></label>
+                <label for="black"><span id="black"></span></label>
                 <input type="radio" name="color" id="black" value="Black">
                 <label for="white"></label>
                 <input type="radio" name="color" id="white" value="White">
@@ -368,7 +369,7 @@
             <p class="purchaseDetails">$90</p>
 
             <svg width="80%">
-                <line x1="0" x2="100%" style="stroke:rgb(255,0,0);stroke-width:5" /> Sorry, your browser does not support inline SVG.
+                <line x1="0%" y1="0" x2="100%" y2="0" style="stroke:rgb(0,0,0);stroke-width:5" /> Sorry, your browser does not support inline SVG.
             </svg>
 
             <h2>Shipping</h2>
@@ -377,7 +378,7 @@
             <p class="purchaseDetails">$90</p>
 
             <svg width="80%">
-                <line x1="0" x2="100%" style="stroke:rgb(255,0,0);stroke-width:5" /> Sorry, your browser does not support inline SVG.
+                <line x1="0" x2="100%" style="stroke:rgb(0,0,0);stroke-width:5" /> Sorry, your browser does not support inline SVG.
             </svg>
 
             <!-- USE UL OR P-->

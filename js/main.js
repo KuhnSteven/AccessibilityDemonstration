@@ -2,6 +2,7 @@
 // target all internal elements inside form & the form itself
 var formElements = document.getElementById('checkoutForm').elements;
 var form = document.querySelector("#checkoutForm");
+var output = document.querySelector("#formOutput");
 
 // form variable instantiation
 var validForm = true;
@@ -48,6 +49,7 @@ function formBuild() {
 
 // check all inputs to be proper
 function formValidation() {
+    // if size is none of the options...
     if (size != "SML" && size != "MED" && size != "LRG" && size != "X-LRG") {
         alert("You must select a size before you continue.");
         validForm = false;
@@ -55,7 +57,7 @@ function formValidation() {
     else {
         console.log("valid size.");
     }
-
+    // if color is none of the options...
     if (color != "Red" && color != "White" && color != "Ref" && color != "Blue") {
         alert("You must select a color before you continue.");
         validForm = false;
@@ -63,7 +65,7 @@ function formValidation() {
     else {
         console.log("valid color.");
     }
-
+    // if name is default "" or is missing a space for last name
     if (name == "" || !name.includes(" ")) {
         alert("You must enter your full-name before you continue.");
         validForm = false;
@@ -71,7 +73,7 @@ function formValidation() {
     else {
         console.log("valid name.");
     }
-
+    // if eMail is default "", or does not have an @ after the 4th space, or does not have specifically ".com" after the 7th space...
     if (email == "" || !email.includes("@", 3) || !email.includes(".com", 6)) {
         alert("You must enter a valid e-mail address before you continue. (.com only)");
         validForm = false;
@@ -87,7 +89,7 @@ function formValidation() {
     else {
         console.log("valid address.");
     }
-
+    // if zip is default value or larger than 5 digits...
     if (zip == 0 || zip > 99999) {
         alert("You must enter a proper zip-code before you continue.");
         validForm = false;
@@ -105,6 +107,9 @@ function formOutput() {
         console.log("Form build error");
     }
     else {
-        formOutput = ?;
+        // build the output info
+        content = `<h1>ORDER DETAILS</h1><p><br>Product Size: ${size}<br>Product Color: ${color}<br><br>Customer Name: ${name}<br>Customer Email: ${email}<br>Shipping Address 1: ${sAddress}<br>Shipping Address 2: ${sAddress2}<br>City: ${city}<br>State: ${state}<br>Zip: ${zip}<br>Country: ${country}</p>`;
+        // display to page
+        output.innerHTML(content);
     }
 }

@@ -1,3 +1,8 @@
+form {
+    background-color: $form-color;
+    color: $tertiary-color;
+}
+
 input:invalid {
     border-color: red;
     border-width: 2px;
@@ -8,4 +13,12 @@ input:valid {
     border-color: black;
     border-width: 1px;
     border-style: solid;
+}
+
+.purchaseDetails {
+    float: right;
+}
+
+#black {
+    background-color: black;
 }

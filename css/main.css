@@ -1,0 +1,37 @@
+/* Style Guide*/
+p {
+  margin: 0px; }
+
+image {
+  width: 25%;
+  height: auto; }
+
+section {
+  display: block;
+  max-width: 30%; }
+
+.vCard {
+  display: block; }
+  .vCard span {
+    display: block; }
+
+/* global variables */
+form {
+  background-color: #9e9e9e;
+  color: #002a2a; }
+
+input:invalid {
+  border-color: red;
+  border-width: 2px;
+  border-style: dashed; }
+
+input:valid {
+  border-color: black;
+  border-width: 1px;
+  border-style: solid; }
+
+.purchaseDetails {
+  float: right; }
+
+#black {
+  background-color: black; }
