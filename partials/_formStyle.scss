@@ -80,6 +80,9 @@ button {
     justify-content: space-around;
     flex-wrap: wrap;
     margin-bottom: 25px;
+    label {
+        color: rgba(0,0,0,0);
+    }
 }
 
 .purchaseDetails {
