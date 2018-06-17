@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Checkout</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
-    <form id="checkoutForm" onsubmit="return formValidation()">
+    <form id="checkoutForm" onsubmit="return formBuild()">
         <section>
             <h1>Product- Tiger & Palms Leather Jacket</h1>
             <img src="graphics/TigerHoodie.jpeg">
@@ -24,14 +24,14 @@
                 <input type="radio" name="size" id="extraLarge" value="X-LRG">
 
             <p>Choose A Color:</p>
-                <label for=""></label>
-                <input type="radio" name="color" id="" value="">
-                <label for=""></label>
-                <input type="radio" name="color" id="" value="">
-                <label for=""></label>
-                <input type="radio" name="color" id="" value="">
-                <label for=""></label>
-                <input type="radio" name="color" id="" value="">
+                <label for="black"></label>
+                <input type="radio" name="color" id="black" value="Black">
+                <label for="white"></label>
+                <input type="radio" name="color" id="white" value="White">
+                <label for="red"></label>
+                <input type="radio" name="color" id="red" value="Red">
+                <label for="blue"></label>
+                <input type="radio" name="color" id="blue" value="Blue">
         </section>
 
         <section>
