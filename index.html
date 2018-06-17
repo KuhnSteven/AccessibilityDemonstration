@@ -8,13 +8,17 @@
     <link rel="stylesheet" type="text/css" href="css/main.css" />
 </head>
 <body>
+    <!-- div meant to contain output data-->
     <div id="formOutput"></div>
     <form id="checkoutForm" onsubmit="return formBuild()">
         <section>
             <h1>Product- Tiger & Palms Leather Jacket</h1>
-            <img src="graphics/TigerHoodie.jpeg">
+            <figure id="cropImage">
+                <img src="graphics/TigerHoodie.jpeg">
+            </figure>
             <h1 id="price">$90</h1>
-            <p>Choose A Size:</p>
+            <div class="radioBoxes">
+                <p>Choose A Size:</p>
                 <label for="small">SML</label>
                 <input type="radio" name="size" id="small" value="SML">
                 <label for="medium">MED</label>
@@ -23,34 +27,37 @@
                 <input type="radio" name="size" id="large" value="LRG">
                 <label for="extraLarge">X-LRG</label>
                 <input type="radio" name="size" id="extraLarge" value="X-LRG">
+            </div>
 
-            <p>Choose A Color:</p>
-                <label for="black"><span id="black"></span></label>
+            <div class="radioBoxes">
+                <p>Choose A Color:</p>
+                <label for="black"><div id="blackC"></div></label>
                 <input type="radio" name="color" id="black" value="Black">
-                <label for="white"></label>
+                <label for="white"><div id="whiteC"></div></label>
                 <input type="radio" name="color" id="white" value="White">
-                <label for="red"></label>
+                <label for="red"><div id="redC"></div></label>
                 <input type="radio" name="color" id="red" value="Red">
-                <label for="blue"></label>
+                <label for="blue"><div id="blueC"></div></label>
                 <input type="radio" name="color" id="blue" value="Blue">
+            </div>
         </section>
 
         <section>
             <h1>Order Details</h1>
                 <label for="fullName">Full Name:</label>
-                <input type="text" id="fullName">
+                <input type="text" id="fullName" name="customer name" required>
                 <label for="email">eMail:</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="customer e-mail" required>
                 <label for="add1">Address 1:</label>
-                <input type="text" id="add1">
+                <input type="text" id="add1" name="address line 1" required>
                 <label for="add2">Address 2:</label>
-                <input type="text" id="add2">
+                <input type="text" id="add2" name="address line 2">
                 <label for="city">City:</label>
-                <input type="text" id="city">
+                <input type="text" id="city" name="city" required>
 
                 <label for="state">State:</label>
                 <!-- CAUTION: 50 options, all states-->
-                <select id="state">
+                <select id="state" name="state">
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -105,11 +112,11 @@
                 </select>
 
                 <label for="zip">Zipcode:</label>
-                <input type="number" id="zip">
+                <input type="number" id="zip" name="zipcode" required>
 
                 <label for="country">Country:</label>
                 <!-- CAUTION: roughly 250 options, all countries-->
-                <select id="country">
+                <select id="country" name="country">
                     <option value="AFG">Afghanistan</option>
                     <option value="ALA">Åland Islands</option>
                     <option value="ALB">Albania</option>

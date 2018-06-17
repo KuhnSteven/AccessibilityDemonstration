@@ -2,17 +2,32 @@ p {
     margin: 0px;
 }
 
-image {
-    width: 25%;
-    height: auto;
+svg {
+    height: 5px;
+    padding: 0px;
+    margin: 0px;
 }
 
-section {
-    display: block;
-    max-width: 30%;
-
+figure {
+    width: 75%;
+    overflow: hidden;
+    margin: 0px;
+    img {
+        display: block;
+        width: 100%;
+    }
 }
 
+// IDs
+#cropImage img{
+    margin: -30% 0;
+}
+
+#extraLarge {
+    margin-bottom: 20px;
+}
+
+// classes
 .vCard {
     display: block;
     span {

@@ -81,8 +81,8 @@ function formValidation() {
     else {
         console.log("valid eMail.");
     }
-
-    if (add1 == "") {
+    // if address is default ""...
+    if (add1 == "" || add1) {
         alert("You must enter a valid address before you continue.");
         validForm = false;
     }

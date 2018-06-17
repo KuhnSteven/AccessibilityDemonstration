@@ -1,6 +1,59 @@
 form {
     background-color: $form-color;
     color: $tertiary-color;
+    height: 1000px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+// Mobile 1st
+@include mobile {
+    // while I was researching image crop, I found a neat solution to aligning all of my section content via float
+    section {
+        display: inline-flex;
+        flex-direction: column;
+        width: 80%;
+        padding: 20px;
+        border-bottom-color: black;
+        border-bottom-width: 2px;
+        border-bottom-style: solid;
+    }
+}
+
+// Desktop view
+@include desktop {
+    // while I was researching image crop, I found a neat solution to aligning all of my section content via float
+    section {
+        //display: inline-flex;
+        //flex-direction: column;
+        float: left;
+        width: 30%;
+        max-width: 500px;
+        padding: 20px;
+        border-right-color: black;
+        border-right-width: 2px;
+        border-right-style: solid;
+    }
+}
+
+select {
+    padding: 5px;
+    margin-right: 20px;
+}
+
+label {
+    display: block;
+    margin: 5px;
+}
+
+input {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=radio] {
+    display: inline-flex;
+    flex-direction: row;
 }
 
 input:invalid {
@@ -15,10 +68,57 @@ input:valid {
     border-style: solid;
 }
 
-.purchaseDetails {
-    float: right;
+button {
+    padding: 10px;
+    margin: 20px;
+    font-size: $large-font;
 }
 
-#black {
+// classes
+.radioBoxes {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 25px;
+}
+
+.purchaseDetails {
+    float: right;
+    position: relative;
+    bottom: 30px;
+}
+
+// IDs
+#price {
+    display: block;
+    position: relative;
+    left: 75%;
+}
+
+#blackC {
     background-color: black;
+    width: $colorBoxes;
+    height: $colorBoxes;
+    border: 1px black solid;
+}
+
+#whiteC {
+    background-color: white;
+    width: $colorBoxes;
+    height: $colorBoxes;
+    border: 1px black solid;
+}
+
+#redC {
+    background-color: red;
+    width: $colorBoxes;
+    height: $colorBoxes;
+    border: 1px black solid;
+}
+
+#blueC {
+    background-color: blue;
+    width: $colorBoxes;
+    height: $colorBoxes;
+    border: 1px black solid;
 }
