@@ -10,7 +10,7 @@
 <body>
     <!-- div meant to contain output data-->
     <div id="formOutput"></div>
-    <form id="checkoutForm" onsubmit="return formBuild()">
+    <form id="checkoutForm">
         <section>
             <h1>Product- Tiger & Palms Leather Jacket</h1>
             <figure id="cropImage">
@@ -367,10 +367,11 @@
                     <option value="ZMB">Zambia</option>
                     <option value="ZWE">Zimbabwe</option>
                 </select>
+                <input type="submit" value="Complete Order">
             </section>
         </form>
 
-        <section>
+        <section id="orderSummary">
             <h1>Order Summary</h1>
             <p>Tiger & Palms Leather Jacket</p>
             <p class="purchaseDetails">$90</p>
@@ -402,7 +403,7 @@
                 </span>
             </div>
 
-            <button type="submit">Complete Order</button>
+            
         </section>
     <script src="js/main.js"></script>
 </body>
