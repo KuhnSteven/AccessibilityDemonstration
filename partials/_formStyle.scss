@@ -1,9 +1,8 @@
 form {
+    position: absolute;
     background-color: $form-color;
     color: $tertiary-color;
-    height: 1000px;
     padding: 20px;
-    margin-bottom: 20px;
 }
 
 // Mobile 1st
@@ -14,6 +13,7 @@ form {
         flex-direction: column;
         width: 80%;
         padding: 20px;
+        margin-bottom: 25px; 
         border-bottom-color: black;
         border-bottom-width: 2px;
         border-bottom-style: solid;
@@ -22,10 +22,7 @@ form {
 
 // Desktop view
 @include desktop {
-    // while I was researching image crop, I found a neat solution to aligning all of my section content via float
     section {
-        //display: inline-flex;
-        //flex-direction: column;
         float: left;
         width: 30%;
         max-width: 500px;
@@ -51,11 +48,6 @@ input {
     flex-direction: column;
 }
 
-input[type=radio] {
-    display: inline-flex;
-    flex-direction: row;
-}
-
 input:invalid {
     border-color: red;
     border-width: 2px;
@@ -68,7 +60,7 @@ input:valid {
     border-style: solid;
 }
 
-button {
+input[type=submit] {
     padding: 10px;
     margin: 20px;
     font-size: $large-font;
@@ -76,13 +68,39 @@ button {
 
 // classes
 .radioBoxes {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-bottom: 25px;
-    label {
-        color: rgba(0,0,0,0);
-    }
+    overflow: hidden;
+    height: 100px;
+    margin: 20px;
+    margin-bottom: 50px;
+}
+
+.radioBoxes input {  
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border-width: 5px;
+    border-style: solid;
+    overflow: hidden;
+}
+
+.radioBoxes label {
+    float: left;
+}
+
+.radioBoxes label {
+    display: inline-block;
+    width: 60px;
+    background-color: #e4e4e4;
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 14px;
+    font-weight: normal;
+    text-align: center;
+    padding: 6px 14px;
+}
+
+.radioBoxes input:checked + label {
+  background-color: $secondary-color;
 }
 
 .purchaseDetails {
@@ -92,6 +110,25 @@ button {
 }
 
 // IDs
+#orderDetails {
+    visibility: hidden;
+    width: 75%;
+    font-size: $standard-font;
+    margin-left: 30%;
+    margin-top: 25%;
+    background-color: $form-color;
+    color: $tertiary-color;
+    border-width: 10px;
+    border-style: ridge;
+    border-color: $primary-color;
+    p {
+        display: block;
+    }
+    h1 {
+        display: block;
+    }
+}
+
 #price {
     display: block;
     position: relative;
@@ -100,6 +137,7 @@ button {
 
 #blackC {
     background-color: black;
+    color: black;
     width: $colorBoxes;
     height: $colorBoxes;
     border: 1px black solid;
@@ -107,6 +145,7 @@ button {
 
 #whiteC {
     background-color: white;
+    color: white;
     width: $colorBoxes;
     height: $colorBoxes;
     border: 1px black solid;
@@ -114,6 +153,7 @@ button {
 
 #redC {
     background-color: red;
+    color: red;
     width: $colorBoxes;
     height: $colorBoxes;
     border: 1px black solid;
@@ -121,6 +161,7 @@ button {
 
 #blueC {
     background-color: blue;
+    color: blue;
     width: $colorBoxes;
     height: $colorBoxes;
     border: 1px black solid;

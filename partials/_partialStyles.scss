@@ -1,3 +1,7 @@
+html {
+    background-color: $tertiary-color;
+}
+
 p {
     margin: 0px;
 }
@@ -23,14 +27,4 @@ figure {
     margin: -30% 0;
 }
 
-#extraLarge {
-    margin-bottom: 20px;
-}
-
 // classes
-.vCard {
-    display: block;
-    span {
-        display: block;
-    }
-}
