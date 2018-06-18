@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 // Target parts of the DOM
 const form = document.querySelector("#checkoutForm");
 // Target all internal elements inside form
@@ -130,7 +128,3 @@ form.addEventListener("submit", e => {
     validateInput();
     orderSummary();
 });
-=======
->>>>>>> 3eb4a4197ed637d2f490164ea7e73ee3ddb96dd0
-=======
->>>>>>> 3eb4a4197ed637d2f490164ea7e73ee3ddb96dd0
